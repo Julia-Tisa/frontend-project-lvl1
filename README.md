@@ -14,3 +14,5 @@
 [![asciicast](https://asciinema.org/a/F5lPriUjdN3VIA02EIJD8qCiq.svg)](https://asciinema.org/a/F5lPriUjdN3VIA02EIJD8qCiq)
 ### Game with progression (easy) and not last ascii-rec <3
 [![asciicast](https://asciinema.org/a/xpI93rZKgwB46s8XmQzJOKQB1.svg)](https://asciinema.org/a/xpI93rZKgwB46s8XmQzJOKQB1)
+### Game with is-prime-number (you may need table from Wiki) and last ascii-rec in this page ;3
+[![asciicast](https://asciinema.org/a/bibOoP2viAShaR8DUF56Fo9am.svg)](https://asciinema.org/a/bibOoP2viAShaR8DUF56Fo9am)
