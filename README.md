@@ -10,3 +10,5 @@
 [![asciicast](https://asciinema.org/a/NHjj9Nil2DQDjc3R2DY8LTTzm.svg)](https://asciinema.org/a/NHjj9Nil2DQDjc3R2DY8LTTzm)
 ### Second game and not first/second/third ascii-rec ;)
 [![asciicast](https://asciinema.org/a/Edfr40ayWjCL70wUyarrOfLfE.svg)](https://asciinema.org/a/Edfr40ayWjCL70wUyarrOfLfE)
+### Game with NOD (wow!) and ascii-rec-mono-style :)
+[![asciicast](https://asciinema.org/a/F5lPriUjdN3VIA02EIJD8qCiq.svg)](https://asciinema.org/a/F5lPriUjdN3VIA02EIJD8qCiq)
