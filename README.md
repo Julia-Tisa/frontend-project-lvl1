@@ -7,4 +7,6 @@
 ### Github Actions Badge 
 [![GitHub Actions](https://github.com/Julia-Tisa/frontend-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg?branch=main)](https://github.com/Julia-Tisa/frontend-project-lvl1/actions/workflows/github-actions-demo.yml)
 ### First game and first ascii-rec!
-[![asciicast](https://asciinema.org/a/BDkhuUWyJrGnJskwYSAXLLzKP.svg)](https://asciinema.org/a/BDkhuUWyJrGnJskwYSAXLLzKP)
+[![asciicast](https://asciinema.org/a/NHjj9Nil2DQDjc3R2DY8LTTzm.svg)](https://asciinema.org/a/NHjj9Nil2DQDjc3R2DY8LTTzm)
+### Second game and not first/second/third ascii-rec ;)
+[![asciicast](https://asciinema.org/a/Edfr40ayWjCL70wUyarrOfLfE.svg)](https://asciinema.org/a/Edfr40ayWjCL70wUyarrOfLfE)
