@@ -12,3 +12,5 @@
 [![asciicast](https://asciinema.org/a/Edfr40ayWjCL70wUyarrOfLfE.svg)](https://asciinema.org/a/Edfr40ayWjCL70wUyarrOfLfE)
 ### Game with NOD (wow!) and ascii-rec-mono-style :)
 [![asciicast](https://asciinema.org/a/F5lPriUjdN3VIA02EIJD8qCiq.svg)](https://asciinema.org/a/F5lPriUjdN3VIA02EIJD8qCiq)
+### Game with progression (easy) and not last ascii-rec <3
+[![asciicast](https://asciinema.org/a/xpI93rZKgwB46s8XmQzJOKQB1.svg)](https://asciinema.org/a/xpI93rZKgwB46s8XmQzJOKQB1)
