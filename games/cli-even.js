@@ -4,7 +4,6 @@ import { sleep, startGame } from '../src/index.js';
 
 const randomNumber = () => {
   const number = Math.floor(Math.random() * 100);
-  console.log(`Question: ${number}`);
   return number;
 }
 
@@ -18,6 +17,7 @@ const game = () => {
   const yes = 'yes';
   while (counter < 3) {
     const number = randomNumber();
+    console.log(`Question: ${number}`);
     sleep(500);
     const ask = readlineSync.question('Your answer: ');
     sleep(1000);
