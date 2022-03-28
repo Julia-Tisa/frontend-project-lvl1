@@ -1,10 +1,5 @@
-import readlineSync from 'readline-sync';
-import { sleep, startGame } from '../src/index.js';
-
-const randomNumber = () => {
-  const number = Math.floor(Math.random() * 10);
-  return number;
-};
+import logicOfGame from '../src/index.js';
+import randomNumber from '../src/helper.js';
 
 const randomSign = () => {
   const num = Math.floor(Math.random() * 3);
@@ -29,32 +24,17 @@ const resultExpression = (num1, num2, sign) => {
   }
 };
 
-const game = () => {
-  const name = startGame();
-  console.log('What is the result of the expression?');
-  console.log();
-  sleep(2000);
-  let counter = 0;
-  while (counter < 3) {
-    const num1 = randomNumber();
-    const num2 = randomNumber();
+const calc = () => {
+  const instructions = 'What is the result of the expression?';
+
+  const game = () => {
+    const num1 = randomNumber(0, 100);
+    const num2 = randomNumber(0, 100);
     const sign = randomSign();
-    const result = resultExpression(num1, num2, sign);
-    console.log(`Question: ${num1} ${sign} ${num2}`);
-    sleep(500);
-    const ask = readlineSync.question('Your answer: ');
-    sleep(1000);
-    if (ask !== String(result)) {
-      console.log();
-      return `'${ask}' is wrong answer ;(. Correct answer was '${result}'.
-      Let's try again, ${name}!`;
-    }
-    counter += 1;
-    console.log('Correct!');
-    console.log();
-    sleep(500);
-  }
-  sleep(500);
-  return `Congratulations, ${name}!`;
+    const result = String(resultExpression(num1, num2, sign));
+    const question = `${num1} ${sign} ${num2}`;
+    return [question, result];
+  };
+  logicOfGame(instructions, game);
 };
-export default game;
+export default calc;

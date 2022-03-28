@@ -1,10 +1,5 @@
-import readlineSync from 'readline-sync';
-import { sleep, startGame } from '../src/index.js';
-
-const randomNumber = () => {
-  const number = Math.floor(Math.random() * 10 + 1);
-  return number;
-};
+import logicOfGame from '../src/index.js';
+import randomNumber from '../src/helper.js';
 
 const nod = (x, y) => {
   if (y > x) return nod(y, x);
@@ -12,31 +7,16 @@ const nod = (x, y) => {
   return nod(y, x % y);
 };
 
-const game = () => {
-  const name = startGame();
-  console.log('Find the greatest common divisor of given numbers.');
-  console.log();
-  sleep(2000);
-  let counter = 0;
-  while (counter < 3) {
-    const num1 = randomNumber();
-    const num2 = randomNumber();
-    const result = nod(num1, num2);
-    console.log(`Question: ${num1} ${num2}`);
-    sleep(500);
-    const ask = readlineSync.question('Your answer: ');
-    sleep(1000);
-    if (ask !== String(result)) {
-      console.log();
-      return `'${ask}' is wrong answer ;(. Correct answer was '${result}'.
-        Let's try again, ${name}!`;
-    }
-    counter += 1;
-    console.log('Correct!');
-    console.log();
-    sleep(500);
-  }
-  sleep(500);
-  return `Congratulations, ${name}!`;
+const calc = () => {
+  const instructions = 'Find the greatest common divisor of given numbers.';
+
+  const game = () => {
+    const num1 = randomNumber(1, 50);
+    const num2 = randomNumber(20, 100);
+    const result = String(nod(num1, num2));
+    const question = `${num1} ${num2}`;
+    return [question, result];
+  };
+  logicOfGame(instructions, game);
 };
-export default game;
+export default calc;

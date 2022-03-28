@@ -1,26 +1,11 @@
-import readlineSync from 'readline-sync';
-import { sleep, startGame } from '../src/index.js';
-
-const randomNumber = () => {
-  const number = Math.floor(Math.random() * 10);
-  return number;
-};
-
-const randomNumberForMissing = (randomLenght) => {
-  const number = Math.floor(Math.random() * randomLenght);
-  return number;
-};
-
-const randomLenght = () => {
-  const number = Math.floor(Math.random() * 10 + 5);
-  return number;
-};
+import logicOfGame from '../src/index.js';
+import randomNumber from '../src/helper.js';
 
 const randomArrayofNumbers = () => {
-  const length = randomLenght();
-  const step = randomNumber() + 2;
+  const length = randomNumber(5, 10);
+  const step = randomNumber(2, 18);
   const randomArray = [];
-  let a = randomNumber();
+  let a = randomNumber(1, 50);
   for (let i = 0; i < length; i += 1) {
     randomArray.push(a);
     a += step;
@@ -29,7 +14,7 @@ const randomArrayofNumbers = () => {
 };
 
 const missingProgression = (randomArray, lenght) => {
-  const missing = randomNumberForMissing(lenght);
+  const missing = randomNumber(0, lenght);
   const randomArrayWithMissing = [];
   for (let i = 0; i < randomArray.length; i += 1) {
     randomArrayWithMissing.push(randomArray[i]);
@@ -38,32 +23,17 @@ const missingProgression = (randomArray, lenght) => {
   return randomArrayWithMissing;
 };
 
-const game = () => {
-  const name = startGame();
-  console.log('What number is missing in the progression?');
-  console.log();
-  sleep(1000);
-  let counter = 0;
-  while (counter < 3) {
+const calc = () => {
+  const instructions = 'What number is missing in the progression?';
+
+  const game = () => {
     const randomArray = randomArrayofNumbers();
     const randomArrayWithMissing = missingProgression(randomArray, randomArray.length);
     const index = randomArrayWithMissing.indexOf('..');
-    const rightNumber = randomArray[index];
-    console.log(`Question: ${randomArrayWithMissing.join(' ')}`);
-    sleep(2000);
-    const ask = readlineSync.question('Your answer: ');
-    sleep(1000);
-    if (ask !== String(rightNumber)) {
-      console.log();
-      return `'${ask}' is wrong answer ;(. Correct answer was '${rightNumber}'.
-          Let's try again, ${name}!`;
-    }
-    counter += 1;
-    console.log('Correct!');
-    console.log();
-    sleep(500);
-  }
-  sleep(500);
-  return `Congratulations, ${name}!`;
+    const result = String(randomArray[index]);
+    const question = `${randomArrayWithMissing.join(' ')}`;
+    return [question, result];
+  };
+  logicOfGame(instructions, game);
 };
-export default game;
+export default calc;
