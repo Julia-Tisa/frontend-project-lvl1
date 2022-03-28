@@ -11,7 +11,6 @@ const sleep = (milliseconds) => {
 const startGame = () => {
   console.log();
   console.log('Welcome to the Brain Games!');
-  console.log();
   sleep(1000);
   const name = readlineSync.question('May I have your name? ');
   sleep(500);
