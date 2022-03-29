@@ -11,10 +11,10 @@ const isPrime = (number) => {
   return true;
 };
 
-const calc = () => {
+const game = () => {
   const instructions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-  const game = () => {
+  const calculateResult = () => {
     const no = 'no';
     const yes = 'yes';
     const number = randomNumber(1, randomNumber(100, 997));
@@ -26,6 +26,6 @@ const calc = () => {
     }
     return [question, result];
   };
-  logicOfGame(instructions, game);
+  logicOfGame(instructions, calculateResult);
 };
-export default calc;
+export default game;

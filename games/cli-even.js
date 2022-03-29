@@ -1,10 +1,10 @@
 import logicOfGame from '../src/index.js';
 import randomNumber from '../src/helper.js';
 
-const calc = () => {
+const game = () => {
   const instructions = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  const game = () => {
+  const calculateResult = () => {
     const no = 'no';
     const yes = 'yes';
     const number = randomNumber(0, randomNumber(100, 4576));
@@ -15,6 +15,6 @@ const calc = () => {
     }
     return [question, result];
   };
-  logicOfGame(instructions, game);
+  logicOfGame(instructions, calculateResult);
 };
-export default calc;
+export default game;

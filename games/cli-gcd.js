@@ -7,16 +7,16 @@ const nod = (x, y) => {
   return nod(y, x % y);
 };
 
-const calc = () => {
+const game = () => {
   const instructions = 'Find the greatest common divisor of given numbers.';
 
-  const game = () => {
+  const calculateResult = () => {
     const num1 = randomNumber(1, 50);
     const num2 = randomNumber(20, 100);
     const result = String(nod(num1, num2));
     const question = `${num1} ${num2}`;
     return [question, result];
   };
-  logicOfGame(instructions, game);
+  logicOfGame(instructions, calculateResult);
 };
-export default calc;
+export default game;

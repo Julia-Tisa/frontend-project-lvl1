@@ -24,10 +24,10 @@ const resultExpression = (num1, num2, sign) => {
   }
 };
 
-const calc = () => {
+const game = () => {
   const instructions = 'What is the result of the expression?';
 
-  const game = () => {
+  const calculateResult = () => {
     const num1 = randomNumber(0, 100);
     const num2 = randomNumber(0, 100);
     const sign = randomSign();
@@ -35,6 +35,6 @@ const calc = () => {
     const question = `${num1} ${sign} ${num2}`;
     return [question, result];
   };
-  logicOfGame(instructions, game);
+  logicOfGame(instructions, calculateResult);
 };
-export default calc;
+export default game;

@@ -24,10 +24,10 @@ const missingProgression = (randomArray, lenghtArray) => {
   return randomArrayWithMissing;
 };
 
-const calc = () => {
+const game = () => {
   const instructions = 'What number is missing in the progression?';
 
-  const game = () => {
+  const calculateResult = () => {
     const randomArray = randomArrayofNumbers();
     const randomArrayWithMissing = missingProgression(randomArray, randomArray.length);
     const index = randomArrayWithMissing.indexOf('..');
@@ -35,6 +35,6 @@ const calc = () => {
     const question = `${randomArrayWithMissing.join(' ')}`;
     return [question, result];
   };
-  logicOfGame(instructions, game);
+  logicOfGame(instructions, calculateResult);
 };
-export default calc;
+export default game;
