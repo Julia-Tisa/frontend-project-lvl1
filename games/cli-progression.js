@@ -13,7 +13,8 @@ const randomArrayofNumbers = () => {
   return randomArray;
 };
 
-const missingProgression = (randomArray, lenght) => {
+const missingProgression = (randomArray, lenghtArray) => {
+  const lenght = lenghtArray - 1;
   const missing = randomNumber(0, lenght);
   const randomArrayWithMissing = [];
   for (let i = 0; i < randomArray.length; i += 1) {
