@@ -1,5 +1,5 @@
-import logicOfGame from '../src/index.js';
-import randomNumber from '../src/helper.js';
+import logicOfGame from '../index.js';
+import randomNumber from '../random-number.js';
 
 const nod = (x, y) => {
   if (y > x) return nod(y, x);

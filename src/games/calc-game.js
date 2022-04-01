@@ -1,5 +1,5 @@
-import logicOfGame from '../src/index.js';
-import randomNumber from '../src/helper.js';
+import logicOfGame from '../index.js';
+import randomNumber from '../random-number.js';
 
 const randomSign = () => {
   const num = Math.floor(Math.random() * 3);
