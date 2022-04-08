@@ -1,4 +1,4 @@
-import logicOfGame from '../index.js';
+import engineOfGame from '../index.js';
 import randomNumber from '../random-number.js';
 
 const isPrime = (num) => {
@@ -20,6 +20,6 @@ const game = () => {
     const result = isPrimeNumber ? 'yes' : 'no';
     return [question, result];
   };
-  logicOfGame(instructions, calculateResult);
+  engineOfGame(instructions, calculateResult);
 };
 export default game;

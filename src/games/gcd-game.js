@@ -1,4 +1,4 @@
-import logicOfGame from '../index.js';
+import engineOfGame from '../index.js';
 import randomNumber from '../random-number.js';
 
 const nod = (x, y) => {
@@ -17,6 +17,6 @@ const game = () => {
     const question = `${num1} ${num2}`;
     return [question, result];
   };
-  logicOfGame(instructions, calculateResult);
+  engineOfGame(instructions, calculateResult);
 };
 export default game;

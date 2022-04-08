@@ -1,4 +1,4 @@
-import logicOfGame from '../index.js';
+import engineOfGame from '../index.js';
 import randomNumber from '../random-number.js';
 
 const randomArrayofNumbers = (length, step) => {
@@ -11,7 +11,7 @@ const randomArrayofNumbers = (length, step) => {
   return randomArray;
 };
 
-const missingProgression = (randomArray, lengthArray) => {
+const missingInProgression = (randomArray, lengthArray) => {
   const lenght = lengthArray - 1;
   const missing = randomNumber(0, lenght);
   const randomArrayWithMissing = [];
@@ -29,12 +29,12 @@ const game = () => {
     const length = randomNumber(5, 10);
     const step = randomNumber(2, 18);
     const randomArray = randomArrayofNumbers(length, step);
-    const randomArrayWithMissing = missingProgression(randomArray, randomArray.length);
+    const randomArrayWithMissing = missingInProgression(randomArray, randomArray.length);
     const index = randomArrayWithMissing.indexOf('..');
     const result = String(randomArray[index]);
     const question = `${randomArrayWithMissing.join(' ')}`;
     return [question, result];
   };
-  logicOfGame(instructions, calculateResult);
+  engineOfGame(instructions, calculateResult);
 };
 export default game;

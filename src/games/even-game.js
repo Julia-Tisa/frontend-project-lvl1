@@ -1,4 +1,4 @@
-import logicOfGame from '../index.js';
+import engineOfGame from '../index.js';
 import randomNumber from '../random-number.js';
 
 const isEven = (number) => {
@@ -17,6 +17,6 @@ const game = () => {
     const result = isEven(number) ? 'yes' : 'no';
     return [question, result];
   };
-  logicOfGame(instructions, calculateResult);
+  engineOfGame(instructions, calculateResult);
 };
 export default game;
