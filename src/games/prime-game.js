@@ -1,9 +1,8 @@
 import logicOfGame from '../index.js';
 import randomNumber from '../random-number.js';
 
-const isPrime = (number) => {
-  const num = number;
-  for (let i = 2; i <= num / 2; i += 1) {
+const isPrime = (num) => {
+  for (let i = 2; i <= Math.sqrt(num); i += 1) {
     if (num % i === 0) {
       return false;
     }
@@ -15,15 +14,10 @@ const game = () => {
   const instructions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
   const calculateResult = () => {
-    const no = 'no';
-    const yes = 'yes';
     const number = randomNumber(1, randomNumber(100, 997));
     const isPrimeNumber = isPrime(number);
     const question = `${number}`;
-    let result = no;
-    if (isPrimeNumber) {
-      result = yes;
-    }
+    const result = isPrimeNumber ? 'yes' : 'no';
     return [question, result];
   };
   logicOfGame(instructions, calculateResult);
