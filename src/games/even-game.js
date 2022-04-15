@@ -8,9 +8,9 @@ const isEven = (number) => {
   return false;
 };
 
-const game = () => {
-  const instructions = 'Answer "yes" if the number is even, otherwise answer "no".';
+const instructions = 'Answer "yes" if the number is even, otherwise answer "no".';
 
+const game = () => {
   const generateRoundData = () => {
     const number = generateRandomNumber(0, generateRandomNumber(100, 4576));
     const question = `${number}`;

@@ -13,9 +13,9 @@ const isPrime = (num) => {
   return true;
 };
 
-const game = () => {
-  const instructions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const instructions = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
+const game = () => {
   const generateRoundData = () => {
     const number = generateRandomNumber(1, generateRandomNumber(100, 997));
     const isPrimeNumber = isPrime(number);

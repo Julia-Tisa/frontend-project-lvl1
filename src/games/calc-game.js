@@ -16,9 +16,9 @@ const calculateExpression = (num1, num2, operand) => {
   }
 };
 
-const game = () => {
-  const instructions = 'What is the result of the expression?';
+const instructions = 'What is the result of the expression?';
 
+const game = () => {
   const generateRoundData = () => {
     const num1 = generateRandomNumber(0, 100);
     const num2 = generateRandomNumber(0, 100);

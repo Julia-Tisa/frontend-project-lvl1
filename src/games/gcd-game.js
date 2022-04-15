@@ -7,9 +7,9 @@ const nod = (x, y) => {
   return nod(y, x % y);
 };
 
-const game = () => {
-  const instructions = 'Find the greatest common divisor of given numbers.';
+const instructions = 'Find the greatest common divisor of given numbers.';
 
+const game = () => {
   const generateRoundData = () => {
     const num1 = generateRandomNumber(1, 50);
     const num2 = generateRandomNumber(20, 100);

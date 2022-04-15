@@ -22,9 +22,9 @@ const missingInProgression = (randomArray, lengthArray) => {
   return randomArrayWithMissing;
 };
 
-const game = () => {
-  const instructions = 'What number is missing in the progression?';
+const instructions = 'What number is missing in the progression?';
 
+const game = () => {
   const generateRoundData = () => {
     const length = generateRandomNumber(5, 10);
     const step = generateRandomNumber(2, 18);
