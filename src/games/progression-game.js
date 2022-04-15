@@ -25,7 +25,7 @@ const missingInProgression = (randomArray, lengthArray) => {
 const game = () => {
   const instructions = 'What number is missing in the progression?';
 
-  const calculateResult = () => {
+  const generateRoundData = () => {
     const length = generateRandomNumber(5, 10);
     const step = generateRandomNumber(2, 18);
     const randomArray = randomArrayofNumbers(length, step);
@@ -35,6 +35,6 @@ const game = () => {
     const question = `${randomArrayWithMissing.join(' ')}`;
     return [question, result];
   };
-  engineOfGame(instructions, calculateResult);
+  engineOfGame(instructions, generateRoundData);
 };
 export default game;

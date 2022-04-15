@@ -11,12 +11,12 @@ const isEven = (number) => {
 const game = () => {
   const instructions = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  const calculateResult = () => {
+  const generateRoundData = () => {
     const number = generateRandomNumber(0, generateRandomNumber(100, 4576));
     const question = `${number}`;
     const result = isEven(number) ? 'yes' : 'no';
     return [question, result];
   };
-  engineOfGame(instructions, calculateResult);
+  engineOfGame(instructions, generateRoundData);
 };
 export default game;

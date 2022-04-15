@@ -22,7 +22,7 @@ const resultExpression = (num1, num2, sign) => {
 const game = () => {
   const instructions = 'What is the result of the expression?';
 
-  const calculateResult = () => {
+  const generateRoundData = () => {
     const num1 = generateRandomNumber(0, 100);
     const num2 = generateRandomNumber(0, 100);
     const sign = randomSign(generateRandomNumber(0, 2));
@@ -30,6 +30,6 @@ const game = () => {
     const question = `${num1} ${sign} ${num2}`;
     return [question, result];
   };
-  engineOfGame(instructions, calculateResult);
+  engineOfGame(instructions, generateRoundData);
 };
 export default game;
