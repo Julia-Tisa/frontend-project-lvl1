@@ -18,9 +18,8 @@ const instructions = 'Answer "yes" if given number is prime. Otherwise answer "n
 const game = () => {
   const generateRoundData = () => {
     const number = generateRandomNumber(1, generateRandomNumber(100, 997));
-    const isPrimeNumber = isPrime(number);
     const question = `${number}`;
-    const correctAnswer = isPrimeNumber ? 'yes' : 'no';
+    const correctAnswer = isPrime(number) ? 'yes' : 'no';
     return [question, correctAnswer];
   };
   engineOfGame(instructions, generateRoundData);
