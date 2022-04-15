@@ -1,5 +1,5 @@
 import engineOfGame from '../index.js';
-import randomNumber from '../random-number.js';
+import generateRandomNumber from '../generate-random-number.js';
 
 const nod = (x, y) => {
   if (y > x) return nod(y, x);
@@ -11,8 +11,8 @@ const game = () => {
   const instructions = 'Find the greatest common divisor of given numbers.';
 
   const calculateResult = () => {
-    const num1 = randomNumber(1, 50);
-    const num2 = randomNumber(20, 100);
+    const num1 = generateRandomNumber(1, 50);
+    const num2 = generateRandomNumber(20, 100);
     const result = String(nod(num1, num2));
     const question = `${num1} ${num2}`;
     return [question, result];

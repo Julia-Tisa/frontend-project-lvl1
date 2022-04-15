@@ -1,5 +1,5 @@
 import engineOfGame from '../index.js';
-import randomNumber from '../random-number.js';
+import generateRandomNumber from '../generate-random-number.js';
 
 const randomSign = (num) => {
   const sign = ['+', '-', '*'];
@@ -23,9 +23,9 @@ const game = () => {
   const instructions = 'What is the result of the expression?';
 
   const calculateResult = () => {
-    const num1 = randomNumber(0, 100);
-    const num2 = randomNumber(0, 100);
-    const sign = randomSign(randomNumber(0, 2));
+    const num1 = generateRandomNumber(0, 100);
+    const num2 = generateRandomNumber(0, 100);
+    const sign = randomSign(generateRandomNumber(0, 2));
     const result = String(resultExpression(num1, num2, sign));
     const question = `${num1} ${sign} ${num2}`;
     return [question, result];

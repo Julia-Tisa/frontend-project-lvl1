@@ -1,5 +1,5 @@
 import engineOfGame from '../index.js';
-import randomNumber from '../random-number.js';
+import generateRandomNumber from '../generate-random-number.js';
 
 const isEven = (number) => {
   if (number % 2 === 0) {
@@ -12,7 +12,7 @@ const game = () => {
   const instructions = 'Answer "yes" if the number is even, otherwise answer "no".';
 
   const calculateResult = () => {
-    const number = randomNumber(0, randomNumber(100, 4576));
+    const number = generateRandomNumber(0, generateRandomNumber(100, 4576));
     const question = `${number}`;
     const result = isEven(number) ? 'yes' : 'no';
     return [question, result];
