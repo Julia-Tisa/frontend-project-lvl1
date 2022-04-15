@@ -1,13 +1,10 @@
 import engineOfGame from '../index.js';
 import generateRandomNumber from '../generate-random-number.js';
 
-const randomSign = (num) => {
-  const sign = ['+', '-', '*'];
-  return sign[num];
-};
+const operands = ['+', '-', '*'];
 
-const resultExpression = (num1, num2, sign) => {
-  switch (sign) {
+const calculateExpression = (num1, num2, operand) => {
+  switch (operand) {
     case '+':
       return num1 + num2;
     case '*':
@@ -15,7 +12,7 @@ const resultExpression = (num1, num2, sign) => {
     case '-':
       return num1 - num2;
     default:
-      throw new Error(`Unknown ${sign}!`);
+      throw new Error(`Unknown ${operand}!`);
   }
 };
 
@@ -25,9 +22,9 @@ const game = () => {
   const generateRoundData = () => {
     const num1 = generateRandomNumber(0, 100);
     const num2 = generateRandomNumber(0, 100);
-    const sign = randomSign(generateRandomNumber(0, 2));
-    const result = String(resultExpression(num1, num2, sign));
-    const question = `${num1} ${sign} ${num2}`;
+    const operand = operands[generateRandomNumber(0, 2)];
+    const result = String(calculateExpression(num1, num2, operand));
+    const question = `${num1} ${operand} ${num2}`;
     return [question, result];
   };
   engineOfGame(instructions, generateRoundData);
