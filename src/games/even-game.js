@@ -1,12 +1,7 @@
 import engineOfGame from '../index.js';
 import generateRandomNumber from '../generate-random-number.js';
 
-const isEven = (number) => {
-  if (number % 2 === 0) {
-    return true;
-  }
-  return false;
-};
+const isEven = (number) => number % 2 === 0;
 
 const instructions = 'Answer "yes" if the number is even, otherwise answer "no".';
 
