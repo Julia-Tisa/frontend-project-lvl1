@@ -23,9 +23,9 @@ const game = () => {
     const num1 = generateRandomNumber(0, 100);
     const num2 = generateRandomNumber(0, 100);
     const operand = operands[generateRandomNumber(0, 2)];
-    const result = String(calculateExpression(num1, num2, operand));
+    const correctAnswer = String(calculateExpression(num1, num2, operand));
     const question = `${num1} ${operand} ${num2}`;
-    return [question, result];
+    return [question, correctAnswer];
   };
   engineOfGame(instructions, generateRoundData);
 };

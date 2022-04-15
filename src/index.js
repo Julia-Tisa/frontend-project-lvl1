@@ -8,12 +8,12 @@ const engineOfGame = (instructions, calculateResult) => {
   console.log(`Hello, ${user}`);
   console.log(instructions);
   for (let i = 0; i < counter; i += 1) {
-    const [question, result] = calculateResult();
+    const [question, correctAnswer] = calculateResult();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (answer !== result) {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${result}'. Let's try again, ${user}!`);
+    if (answer !== correctAnswer) {
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. Let's try again, ${user}!`);
       return;
     }
     console.log('Correct!');

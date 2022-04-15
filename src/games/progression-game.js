@@ -31,9 +31,9 @@ const game = () => {
     const randomArray = randomArrayofNumbers(length, step);
     const randomArrayWithMissing = missingInProgression(randomArray, randomArray.length);
     const index = randomArrayWithMissing.indexOf('..');
-    const result = String(randomArray[index]);
+    const correctAnswer = String(randomArray[index]);
     const question = `${randomArrayWithMissing.join(' ')}`;
-    return [question, result];
+    return [question, correctAnswer];
   };
   engineOfGame(instructions, generateRoundData);
 };

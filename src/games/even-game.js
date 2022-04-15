@@ -9,8 +9,8 @@ const game = () => {
   const generateRoundData = () => {
     const number = generateRandomNumber(0, generateRandomNumber(100, 4576));
     const question = `${number}`;
-    const result = isEven(number) ? 'yes' : 'no';
-    return [question, result];
+    const correctAnswer = isEven(number) ? 'yes' : 'no';
+    return [question, correctAnswer];
   };
   engineOfGame(instructions, generateRoundData);
 };

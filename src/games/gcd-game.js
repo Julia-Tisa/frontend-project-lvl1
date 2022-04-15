@@ -13,9 +13,9 @@ const game = () => {
   const generateRoundData = () => {
     const num1 = generateRandomNumber(1, 50);
     const num2 = generateRandomNumber(20, 100);
-    const result = String(nod(num1, num2));
+    const correctAnswer = String(nod(num1, num2));
     const question = `${num1} ${num2}`;
-    return [question, result];
+    return [question, correctAnswer];
   };
   engineOfGame(instructions, generateRoundData);
 };

@@ -20,8 +20,8 @@ const game = () => {
     const number = generateRandomNumber(1, generateRandomNumber(100, 997));
     const isPrimeNumber = isPrime(number);
     const question = `${number}`;
-    const result = isPrimeNumber ? 'yes' : 'no';
-    return [question, result];
+    const correctAnswer = isPrimeNumber ? 'yes' : 'no';
+    return [question, correctAnswer];
   };
   engineOfGame(instructions, generateRoundData);
 };
