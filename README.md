@@ -8,7 +8,7 @@ make install
 ```
 ## Game start
 ```
-make {game name} / npm lint -> {game name}
+make {game name} / npm link -> {game name}
 ```
 ## Game test
 ```
