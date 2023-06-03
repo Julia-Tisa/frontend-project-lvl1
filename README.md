@@ -2,6 +2,10 @@
 [![Actions Status](https://github.com/Julia-Tisa/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Julia-Tisa/frontend-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/58d3ab3c6c0d1cb01231/maintainability)](https://codeclimate.com/github/Julia-Tisa/frontend-project-lvl1/maintainability)
 [![GitHub Actions](https://github.com/Julia-Tisa/frontend-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg?branch=main)](https://github.com/Julia-Tisa/frontend-project-lvl1/actions/workflows/github-actions-demo.yml)
+### Description
+
+'Brain Games' is a set of five console games based on the popular mobile brain-pumping apps. Each game asks questions to which you must give the right answers. After three correct answers, the game is considered completed. Incorrect answers end the game and prompt you to play it again.
+
 ## Game setup
 ```
 make install
